@@ -15,10 +15,10 @@ from googleapiclient.http import MediaIoBaseDownload, MediaFileUpload
 # ==========================================
 # [設定區]
 # ==========================================
-INPUT_FOLDER_ID = '1sxkmMBmgcMEPXhdhKq4PRTkFFqau5uNp'
-TEMPLATE_FOLDER_ID = '1uljhJix1K9kBj_liuVfQ4cXav4zmvdNG'
-PROCESSED_FOLDER_ID = '1CBUFj4ZvsSq2oWMe4kB98It-MDCXXI1J'
-ARCHIVE_FOLDER_ID = '1GARx6HTKftx9r14ftZFrQzqMTbheXnZ6'
+INPUT_FOLDER_ID = '1izk5fNpsJKfR20qrcyJ1kM_PhjJvceVn'
+TEMPLATE_FOLDER_ID = '1lNdM5HO7VdL_CXIjJPaM5a6BDsxzf9wR'
+PROCESSED_FOLDER_ID = '1MZoNLzXrU1DTF3sVm-qcsd5mZRBQLg59'
+ARCHIVE_FOLDER_ID = '1O-AIx_BhkXcuRux_cp9x8AnOHo8F5-bl'
 TEMPLATE_FILENAME = 'Target.xlsx'
 
 # 【請修改這裡】貼上你剛剛在 Power Automate 產生的 HTTP POST URL
