@@ -1,0 +1,36 @@
+name: Auto Invoice Processor
+
+on:
+  # 1. 排程執行：每 60 分鐘一次
+  #schedule:
+  #  - cron: '*/60 * * * *'
+  
+  # 2. 手動觸發按鈕 (方便測試)
+  workflow_dispatch:
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 下載程式碼
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 設定 Python 環境
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    # 安裝套件
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # 執行主程式 (注入 Secret 到環境變數)
+    - name: Run main script
+      env:
+        GDRIVE_TOKEN: ${{ secrets.GDRIVE_TOKEN }}
+        PA_WEBHOOK_URL: ${{ secrets.PA_WEBHOOK_URL }}
+      run: python main.py
